@@ -13,6 +13,7 @@ import io.jsonwebtoken.security.Keys;
 import jakarta.servlet.http.HttpServletRequest;
 import java.security.Key;
 import java.util.Arrays;
+import java.util.Base64;
 import java.util.Collection;
 import java.util.Date;
 import java.util.stream.Collectors;
@@ -75,6 +76,36 @@ public class TokenProvider {
                 .build(); // TokenDTO 객체로 반환
     }
 
+
+    // refreshToken을 이용하여 accessToken 갱신
+    public TokenDTO.ServiceToken createAccessTokenByRefreshToken(HttpServletRequest request, String refreshToken) {
+        String[] chunks = resolveToken(request).split("\\.");
+
+        Base64.Decoder decoder = Base64.getUrlDecoder();
+        String payload = new String(decoder.decode(chunks[1]));
+        String name = payload.split("\"")[3];
+
+        // 현재 시간
+        long now = (new Date()).getTime();
+
+        // AccessToken 유효 기간
+        Date tokenExpiredTime = new Date(now + accessTokenValidityTime);
+
+        // AccessToken 생성
+        String accessToken = Jwts.builder()
+                .setSubject(name)
+                .claim("auth", "USER")
+                .setExpiration(tokenExpiredTime)
+                .signWith(key, SignatureAlgorithm.HS256)
+                .compact();
+
+        // TokenDTO 형태로 반환
+        return TokenDTO.ServiceToken.builder()
+                .accessToken(accessToken)
+                .refreshToken(refreshToken)
+                .build();
+    }
+
     // 복호화를 통해 토큰에 담겨있는 정보를 가져옴
     public Authentication getAuthentication(String accessToken) {
 
@@ -129,6 +160,15 @@ public class TokenProvider {
         } catch (ExpiredJwtException e) {
             return e.getClaims();
         }
+    }
+
+    // 남은 유효기간 반환
+    public Long getExpiration(String accessToken) {
+        // accessToken 남은 유효시간
+        Date expiration = Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(accessToken).getBody().getExpiration();
+        // 현재 시간
+        Long now = new Date().getTime();
+        return (expiration.getTime() - now);
     }
 }
 
