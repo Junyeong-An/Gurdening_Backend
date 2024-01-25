@@ -9,6 +9,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Transient;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -44,8 +45,15 @@ public class Post extends BaseTimeEntity{
     @Column(nullable = false)
     private int likeCount;
 
+    @Transient // JPA에서 해당 필드가 데베의 테이블의 열에 해당하지 않음. DB에 저장, 조회되지 않음.
+    private boolean isBookmarked;
+
     public void updateViewCount() {
         this.viewCount++;
+    }
+
+    public void updateIsBookmarked(boolean isBookmarked) {
+        this.isBookmarked = isBookmarked;
     }
 
 }

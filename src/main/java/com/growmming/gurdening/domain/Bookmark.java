@@ -34,7 +34,4 @@ public class Bookmark extends BaseTimeEntity {
     @JoinColumn(name = "post_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Post post;
-
-    @Column(nullable = false)
-    private boolean status; // ture = 즐찾 등록, false = 해제
 }
