@@ -14,3 +14,10 @@ spring:
       hibernate:
         format_sql: false
         use_sql_comments: true
+  cloud:
+    gcp:
+      storage:
+        credentials:
+          location: classpath:{charged-city-405512-9c35e6a8a1b4}.json
+    project-id: { charged-city-405512 }
+    bucket: { example-gurdening-com }

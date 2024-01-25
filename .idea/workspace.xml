@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50772fb4-1981-4d67-8e30-15937cfa2d5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/growmming/gurdening/domain/Post.java" afterDir="false" />
+    <list default="true" id="ea9a9dc6-399b-473e-93f8-1acc71d8234a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gradle/8.5/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.5/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/growmming/gurdening/controller/BookmarkController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/charged-city-405512-9c35e6a8a1b4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/growmming/gurdening/repository/BookmarkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/growmming/gurdening/repository/BookmarkRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/growmming/gurdening/service/BookmarkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/growmming/gurdening/service/BookmarkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,18 +28,6 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -39,18 +38,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="img_add" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2bLnTZpFDoWS1SWSbOZNblkJwxU" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2bP8IWWAsms1oTLRvFzZeSub3it" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -60,16 +59,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
-    "last_opened_file_path": "/Users/junyeong/Desktop/sc/Gurdening_Backend",
+    "git-widget-placeholder": "bookmark__add",
+    "last_opened_file_path": "C:/Users/2117a/Desktop/sc/Gurdening_Backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "SDK 위치",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "Settings.JavaScript",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "280486803fc895b67ec2c4182c34d923",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -85,14 +83,15 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="디폴트 작업">
-      <changelist id="50772fb4-1981-4d67-8e30-15937cfa2d5a" name="Changes" comment="" />
-      <created>1703488043963</created>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ea9a9dc6-399b-473e-93f8-1acc71d8234a" name="Changes" comment="" />
+      <created>1706105274069</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1703488043963</updated>
-      <workItem from="1706003236289" duration="420000" />
-      <workItem from="1706003666837" duration="29000" />
+      <updated>1706105274069</updated>
+      <workItem from="1706105275103" duration="2432000" />
+      <workItem from="1706183203832" duration="2634000" />
+      <workItem from="1706193824994" duration="1198000" />
     </task>
     <servers />
   </component>

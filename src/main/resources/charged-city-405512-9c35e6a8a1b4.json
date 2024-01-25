@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "charged-city-405512",
+  "private_key_id": "9c35e6a8a1b427d699fb47b179d26463fc6fbdf5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCG3MlfPXxVyVwd\nx0Gs1ta7w6Uk95KP/DmJwFyPTaiQxqY7CxSv2Er/mXdo3+Xt35v29dZbCBW07qrL\n4XJPrEY1r/FBBy24HUc4fxJ6t2xAlFdwAxtCT0ledr/FByD4aEq3yJAmFMzeKjjK\nLpOtRK9YEnuKoJVrnSLF1PWIuKIHF8i1IRkdVT4HnXcHm664qyejNCBoKcMqTfBa\n1HWizn1PvUls3cb3632n0fmQLxQ0YmXRmzDcV05FsJCHEbzPq8xMzT5hTA6Zr/c9\nTEoqWU+faWiDB0S2mlH4ejkhP/5aLtDj8Q2p6UBlGxDzUpDbhXl1URwdrURRlVzJ\nZZBq53lbAgMBAAECggEALSZ70IPwPXRFf7628RuYFpKglmjAS65AwSqCkoOIXLf0\n7S1/hoOeUEZb4OOcwe+r8plJY36obcO9sLZQo/XkJ5M47PFvUAWVU4fPcwA3oMNJ\nJroThTawNI0DFP6W/jNEWJUwFV+/Wt2914qSbF7jaVP+wmGSxM1918e9UEGoFUFX\nxPQI6FKrxcN496syu34u4/s4fflP0I73miXbGCT5kh6nmqF9qHKUJ629ybYIDrn0\n3C0mwqev6CO8T8u4v/rGZhi84CdTrok17oqWy+2UMaqS5HDAUQ39/gXgYPtQRaMa\nR1L6cNuyVoZF7EyK1c9RuHIsyrb6xn7GO+6Y4Wu5GQKBgQC8+1FU/+iSjIKmxtWh\nFowDS68RJsDFrUHOnKYInmV2DSi/XkynCKCrvQISgoiT3D8nz3jG1A4XynNf7ANO\nVvzR2DiCYsTYfcAdLatCGDpp+ILMQnViTKuX65pdt3wwup58CvFBOBOJsMuB2ggG\ng8XB5U537hatjlqUKlKrlQxafwKBgQC2sEIQZNXgP6S9bnNZJmMc/UTnwhtMOSri\nyGuSvR6+ZPxKkeKetFsuw/LIjH3XnwS8cvvdcHwNzF5PH0AhHky7dpYTkquF5Obf\nuQaPPAnG9pH9cZEGG3+7WGCa3ozMhvDP77mM549SCIJU1eS0G95ilvok/4ItLS1b\nfE5gte0bJQKBgGGueby4xisxy7qO3g90ywxNC4GPCWdkBbbZC4066nDZnm1EPdS8\nxeffO3n71MKwvkhCmkgThfFQKNC0+oR8vBNvcs4aZWsNnMa4O2Rfh5oM5PbVhz03\nKh7Nni3A0MWTQKYXNdqjNJ4gLyDAZROQ+yAc+bFN9JTjFvis46xiz07bAoGAPoT7\nVtjrSJ7/JcTSvMOiT51tI1MOPHuj7ZBhIAqQpt+wZ2SdhWp7efmc8H0D4/KLkGJZ\nR2LjUWWLMNClBbB02gKvQWuEP4IicJXFZOdLAUgIlg9zbf+jKt4H0Xgv/x5+8uo7\nOblVFuHKmHXKmsiexmacnGTEi+lWCGT1/arExfECgYA2oyktOi1+n1HE2Z/UudZn\nR+yiCqs4If8+P23DaX35quNb/Tgjv0s22r3jNFwx1tUaApBoOb6QgJx5hrPY4mh4\ns9ClaztNBzp+vAk1GCEpgO2JRn8Y7oPYVEs/q1hxJ7MAtrhmtmCnjNdSuSl6gjs0\nlHcewAEf8x4O38hTFRtaog==\n-----END PRIVATE KEY-----\n",
+  "client_email": "gurdening@charged-city-405512.iam.gserviceaccount.com",
+  "client_id": "108123153808688362609",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gurdening%40charged-city-405512.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
