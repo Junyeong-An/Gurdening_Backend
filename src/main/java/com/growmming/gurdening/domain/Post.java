@@ -36,11 +36,11 @@ public class Post extends BaseTimeEntity{
     @Column(nullable = false)
     private int viewCount;
 
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "LONGTEXT")
     private String content;
 
-    @Convert(converter = StringListConverter.class)
-    private List<String> images;
+    @Column(nullable = false, columnDefinition = "LONGTEXT")
+    private String images;
 
     @Column(nullable = false)
     private int likeCount;
