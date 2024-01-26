@@ -8,9 +8,22 @@ spring:
     database: mysql
     database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
     show-sql: true
     properties:
       hibernate:
         format_sql: false
         use_sql_comments: true
+#    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+google:
+  client-id: ${GOOGLE_CLIENT_ID}
+  client-secret: ${GOOGLE_CLIENT_SECRET}
+  redirect-uri: ${GOOGLE_REDIRECT_URI}
+jwt:
+  secret: ${JWT_SECRET}
+  expiration:
+    accessToken: ${ACCESS_TOKEN_VALIDITY_IN_MILLISECONDS}
+    refreshToken: ${REFRESH_TOKEN_VALIDITY_IN_MILLISECONDS}
