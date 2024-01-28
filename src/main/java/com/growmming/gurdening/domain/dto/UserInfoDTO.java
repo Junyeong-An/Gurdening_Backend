@@ -10,5 +10,6 @@ public class UserInfoDTO {
     @SerializedName("verified_email")
     private Boolean verifiedEmail;
     private String name;
-
+    @SerializedName("picture")
+    private String pictureUrl;
 }
