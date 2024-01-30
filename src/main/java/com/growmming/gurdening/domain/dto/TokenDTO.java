@@ -11,8 +11,7 @@ public class TokenDTO {
     @Builder
     @AllArgsConstructor
     public static class GoogleToken {
-        @SerializedName("access_token")
-        private String googleAccessToken;
+        private String accessToken;
     }
 
     @Data

@@ -1,10 +1,12 @@
 package com.growmming.gurdening.service;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import com.growmming.gurdening.domain.Member;
 import com.growmming.gurdening.domain.Role;
+import com.growmming.gurdening.domain.dto.MemberDTO;
 import com.growmming.gurdening.domain.dto.TokenDTO;
-import com.growmming.gurdening.domain.dto.TokenDTO.ServiceToken;
 import com.growmming.gurdening.domain.dto.UserInfoDTO;
 import com.growmming.gurdening.repository.MemberRepository;
 import com.growmming.gurdening.token.TokenProvider;
@@ -12,8 +14,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import java.net.URI;
 import java.security.Principal;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
@@ -23,7 +27,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.data.redis.core.RedisTemplate;
 
 @Service
 public class OAuth2Service {
@@ -48,7 +51,7 @@ public class OAuth2Service {
         this.redisTemplate = redisTemplate;
     }
 
-    public String getGoogleAccessToken(String code) {
+    public TokenDTO.GoogleToken getGoogleAccessToken(String code) {
         RestTemplate restTemplate = new RestTemplate(); //  HTTP 요청을 보내기 위한 RestTemplate 객체 생성
         Map<String, String> params = Map.of(
                 "code", code,
@@ -59,21 +62,26 @@ public class OAuth2Service {
                 "grant_type", "authorization_code"
         );
 
+        // 헤더와 파라미터 따로 설정할 필요 없는(자동) 코드
         ResponseEntity<String> responseEntity = restTemplate.postForEntity(GOOGLE_TOKEN_URL, params, String.class);
 
         if (responseEntity.getStatusCode().is2xxSuccessful()) {
-            String json = responseEntity.getBody();
-            Gson gson = new Gson();
+            // 응답 본문(JSON)을 파싱하기 위한 JsonElement 객체 생성
+            JsonElement element = JsonParser.parseString(Objects.requireNonNull(responseEntity.getBody()))
+                    .getAsJsonObject();
 
-            return gson.fromJson(json, TokenDTO.GoogleToken.class)
-                    .getGoogleAccessToken(); // 성공인 경우, 응답 바디에서 파싱하여 액세스 토큰 반환
+            // JsonElement 객체에서 access_token 추출
+            String accessToken = element.getAsJsonObject().get("access_token").getAsString();
+
+            // 추출한 토큰 값들로 TokenDTO.GoogleToken 객체 생성 후 반환
+            return new TokenDTO.GoogleToken(accessToken);
         }
 
         throw new RuntimeException("구글 엑세스 토큰을 가져오는데 실패했습니다.");
     }
 
-    public ServiceToken loginOrSignUp(String googleAccessToken) {
-        UserInfoDTO userInfoDTO = getUserInfoDTO(googleAccessToken);
+    public TokenDTO.ServiceToken loginOrSignUp(MemberDTO.RequestLogin dto) {
+        UserInfoDTO userInfoDTO = getUserInfoDTO(dto.getAccessToken());
 
         if (!userInfoDTO.getVerifiedEmail()) {
             throw new RuntimeException("이메일 인증이 되지 않은 유저입니다.");
@@ -98,14 +106,14 @@ public class OAuth2Service {
 
     public UserInfoDTO getUserInfoDTO(String accessToken) {
         RestTemplate restTemplate = new RestTemplate();
-        String url = "https://www.googleapis.com/oauth2/v2/userinfo?access_token=" + accessToken; // 사용자 정보를 가져오기 위한 URL 설정
+        String url = "https://www.googleapis.com/oauth2/v2/userinfo?access_token=" + accessToken;
 
-        HttpHeaders headers = new HttpHeaders(); // HTTP 요청의 헤더를 설정하는 객체
+        HttpHeaders headers = new HttpHeaders();
         headers.set("Authorization", "Bearer " + accessToken);
         headers.setContentType(MediaType.APPLICATION_JSON);
 
-        RequestEntity<Void> requestEntity = new RequestEntity<>(headers, HttpMethod.GET, URI.create(url)); // HTTP GET 요청 객체
-        ResponseEntity<String> responseEntity = restTemplate.exchange(requestEntity, String.class); // HTTP 요청을 보내고, 그 응답을 ResponseEntity 객체에 저장
+        RequestEntity<Void> requestEntity = new RequestEntity<>(headers, HttpMethod.GET, URI.create(url));
+        ResponseEntity<String> responseEntity = restTemplate.exchange(requestEntity, String.class);
 
         if (responseEntity.getStatusCode().is2xxSuccessful()) {
             String json = responseEntity.getBody();
