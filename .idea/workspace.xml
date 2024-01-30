@@ -5,7 +5,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50772fb4-1981-4d67-8e30-15937cfa2d5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/growmming/gurdening/domain/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Gurdening.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/GurdeningApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/controller/PostController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/BaseTimeEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/Bookmark$BookmarkBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/Bookmark.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/Category.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/Image$ImageBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/Image.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/Member$MemberBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/Member.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/Post$PostBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/Post.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/dto/BookmarkDTO$Response$ResponseBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/dto/BookmarkDTO$Response.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/dto/BookmarkDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/dto/ImageDTO$Response$ResponseBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/dto/ImageDTO$Response.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/dto/ImageDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/dto/PostDTO$Response$ResponseBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/dto/PostDTO$Response.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/domain/dto/PostDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/repository/BookmarkRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/repository/ImageRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/repository/MemberRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/repository/PostRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/service/BookmarkService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/service/PostService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/token/JwtFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/growmming/gurdening/util/StringListConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/growmming/gurdening/controller/PostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/growmming/gurdening/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/growmming/gurdening/config/FirebaseInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/growmming/gurdening/config/FirebaseInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/growmming/gurdening/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/growmming/gurdening/domain/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/growmming/gurdening/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/growmming/gurdening/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,10 +108,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "post__api",
     "last_opened_file_path": "/Users/junyeong/Desktop/sc/Gurdening_Backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -75,6 +131,11 @@
 }]]></component>
   <component name="RunManager">
     <configuration name="GurdeningApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="DB_JDBC_URL" value="jdbc:mysql://localhost:3306/gurdening" />
+        <env name="DB_PASSWORD" value="ju932900" />
+        <env name="DB_USER" value="root" />
+      </envs>
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="Gurdening.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.growmming.gurdening.GurdeningApplication" />
