@@ -4,16 +4,12 @@ import com.growmming.gurdening.domain.Category;
 import com.growmming.gurdening.domain.Post;
 import com.growmming.gurdening.domain.dto.PostDTO;
 import com.growmming.gurdening.repository.PostRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import lombok.RequiredArgsConstructor;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -36,6 +32,7 @@ public class PostService {
                 .likeCount(post.getLikeCount())
                 .build();
     }
+
     @Transactional(readOnly = true)
     public Slice<PostDTO.Response> getPostsByCategory(Pageable pageable, Category category) {
         Slice<Post> posts = postRepository.findByCategory(pageable, category);
@@ -50,6 +47,7 @@ public class PostService {
                 .likeCount(post.getLikeCount())
                 .build());
     }
+
     @Transactional(readOnly = true)
     public Page<PostDTO.Response> getListOfPosts(Pageable pageable) {
         Page<Post> posts = postRepository.findAll(pageable);

@@ -1,69 +1,34 @@
 package com.growmming.gurdening.token;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthException;
-import com.google.firebase.auth.FirebaseToken;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.NoSuchElementException;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.http.HttpStatus;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.web.filter.OncePerRequestFilter;
+import org.springframework.util.StringUtils;
+import org.springframework.web.filter.GenericFilterBean;
 
 @Slf4j
-public class JwtFilter extends OncePerRequestFilter {
-    private UserDetailsService userDetailsService;
-    private FirebaseAuth firebaseAuth;
-
-    public JwtFilter(UserDetailsService userDetailsService, FirebaseAuth firebaseAuth) {
-        this.userDetailsService = userDetailsService;
-        this.firebaseAuth = firebaseAuth;
-    }
+@RequiredArgsConstructor
+public class JwtFilter extends GenericFilterBean {
+    private final TokenProvider tokenProvider;
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
-            throws ServletException, IOException {
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+            throws IOException, ServletException {
+        String token = tokenProvider.resolveToken((HttpServletRequest) request);
 
-        // request hearder로부터 JWT 가져옴
-        FirebaseToken decodedToken;
-        String header = request.getHeader("Authorization");
-        if (header == null || !header.startsWith("Bearer ")) {
-            setUnauthorizedResponse(response, "INVALID_HEADER");
-            return;
-        }
-        String token = header.substring(7); // "Bearer " 뒤에(7번 인덱스)부터 token 가져옴.
+        if (StringUtils.hasText(token) && tokenProvider.validateToken(token)) {
+            Authentication authentication = tokenProvider.getAuthentication(token);
 
-        // idToken 확인
-        try {
-            decodedToken = firebaseAuth.verifyIdToken(token);
-        } catch (FirebaseAuthException| IllegalArgumentException e) {
-            setUnauthorizedResponse(response, "INVALID_TOKEN");
-            return;
-        }
-
-        // User를 가져와 SecurityContext에 저장
-        try {
-            UserDetails user = userDetailsService.loadUserByUsername(decodedToken.getUid());
-            UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
-                    user, null, user.getAuthorities());
+            // SecurityContext에 Authentication 객체를 저장 (인증 정보(authentication)를 Spring Security에게 넘김)
             SecurityContextHolder.getContext().setAuthentication(authentication);
-        } catch (NoSuchElementException e) {
-            setUnauthorizedResponse(response, "USER_NOT_FOUND");
-            return;
         }
-        filterChain.doFilter(request, response);
-    }
-
-    private void setUnauthorizedResponse(HttpServletResponse response, String code) throws IOException {
-        response.setStatus(HttpStatus.SC_UNAUTHORIZED);
-        response.setContentType("application/json");
-        response.getWriter().write("{\"code\":\""+code+"\"}");
+        chain.doFilter(request, response);
     }
 }
