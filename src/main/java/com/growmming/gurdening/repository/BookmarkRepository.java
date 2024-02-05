@@ -9,5 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BookmarkRepository extends JpaRepository<Bookmark, Long> {
     Optional<Bookmark> findByPostAndMember(Post post, Member member);
+    Optional<Bookmark> findByMemberIdAndPostId(Long memberId, Long postId);
     List<Bookmark> findAllByMember(Member member);
 }
