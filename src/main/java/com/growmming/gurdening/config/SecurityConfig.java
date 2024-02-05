@@ -31,8 +31,7 @@ public class SecurityConfig {
                 .formLogin(AbstractHttpConfigurer::disable)
                 .logout(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-                        .requestMatchers("/", "/api/oauth2/**", "/oauth2/**").permitAll()
-                        .requestMatchers("/test").authenticated()
+                        .requestMatchers("/", "/api/oauth2/**", "/oauth2/**", "/post/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .cors(cors -> cors.configurationSource(configurationSource()))
