@@ -18,7 +18,7 @@ public class PostDTO {
         private String title;
         private Category category;
         private int viewCount;
-        private String content;
+        private List<String> content;
         private List<String> images;
         private int likeCount;
 
