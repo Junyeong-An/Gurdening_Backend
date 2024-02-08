@@ -35,7 +35,7 @@ jwt:
 server:
   port: 8443
   ssl:
-    key-store: /etc/letsencrypt/gurdening.duckdns.org/keystore.p12
+    key-store: /etc/letsencrypt/live/gurdening.duckdns.org/keystore.p12
     key-store-password: ${KEY_STORE_PASSWORD}
     key-store-type: pkcs12
     key-alias: tomcat
