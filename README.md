@@ -110,9 +110,9 @@ width:80%;margin:0 auto">
 
 # 👩🏻‍💻 Team of Growmming
 
-|                                김주하                                 |                               박지섭                               |                               박소정                               |                               안준영                               |
-| :-------------------------------------------------------------------: | :----------------------------------------------------------------: | :----------------------------------------------------------------: | :----------------------------------------------------------------: |
-| <img src = "이미지 url" /> | <img src="" /> | <img src="" /> | <img src="" /> |
-|              [@laketree2](https://github.com/laketree2)               |               [@HarrySeop](https://github.com/HarrySeop)               |              [@sojeong0202](https://github.com/sojeong0202)              |               [@Junyeong-An](https://github.com/Junyeong-An)               |
+|                                김주하                                 |                               박지섭                               |                               박소정                               |                                 안준영                                 |
+| :-------------------------------------------------------------------: | :----------------------------------------------------------------: | :----------------------------------------------------------------: | :-------------------------------------------------------------------: |
+| <img src = "https://avatars.githubusercontent.com/u/101048129?v=4" style="width:230px"/> | <img src="https://avatars.githubusercontent.com/u/141125424?v=4" style="width:230px"/> | <img src="https://avatars.githubusercontent.com/u/112674378?v=4" style="width:230px"/> | <img src="https://avatars.githubusercontent.com/u/52746279?v=4" style="width:230px"/> |
+|              [@laketree2](https://github.com/laketree2)               |               [@HarrySeop](https://github.com/HarrySeop)               |              [@sojeong0202](https://github.com/sojeong0202)              |              [@Junyeong-An](https://github.com/Junyeong-An)               |
 
 <br />
