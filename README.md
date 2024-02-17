@@ -1,6 +1,6 @@
 <div align="center">
   <div style = "display:flex;justify-content:center;gap:10px;align-items:center">
-  <img src = "" style = "width:250px" >
+  <img src = "https://github.com/Growmming/Gurdening_Backend/assets/112674378/68f4c95c-873e-4a1f-9447-49c645b6a586" style = "width:250px" >
   <h1 style = "display:flex;align-items:center;margin-top:25px"><b>Growmming/Gurdening</b></h1>
   </div>
   <div style = "display:flex;font-size:15px;justify-content:flex-start">
@@ -63,18 +63,19 @@ This is because we thought that because our service produces 'educational resour
     <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white">
     </div>
   <br/>
-  <h3><b>Mobile</b></h3> <!--expo 추가요망-->
+  <h3><b>Mobile</b></h3>
     <div style = "display:flex;gap:5px;">
     <img src="https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB">
-    <img src="https://img.shields.io/badge/Expo-000000?style=flat-square&logo=Expo&logoColor=white"/>
+    <img src="https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37"/>
     </div>
 
 <hr/>
 
 ## Our architecture
 
-<img src = "./src/assets/readme/Gurdening_Archi.png">
+<img src = "https://github.com/Growmming/Gurdening_Backend/assets/112674378/dd1d4323-f42d-4cec-864e-60eaeb4f2062">
 <!--![image](이미지 url)-->
+
 
 ## Google Tech we use
 
@@ -99,7 +100,7 @@ Firebase was used to host images in the manual, which is the core of our service
 
 ## Database ERD
 
-<img src = "./src/assets/readme/erd.png">
+<img src = "https://github.com/Growmming/Gurdening_Backend/assets/112674378/fd8ad9e4-3c8a-4c36-b1e7-ed34f458acfb">
 <br/>
 
 <hr/>
