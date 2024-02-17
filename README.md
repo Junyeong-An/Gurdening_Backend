@@ -116,8 +116,7 @@ Click the Browse icon to search for manual writing.<br/>
 Click the Category icon to view the entire category.<br/>
 You can also click each category to view the entire manual text that corresponds to it.<br/>
 
-Click the My Information icon.<br/>
-You can use the History and Bookmark features.<br/>
+The login, history, and bookmark features of My information are planned for future development.<br/>
 
 <hr/>
 
