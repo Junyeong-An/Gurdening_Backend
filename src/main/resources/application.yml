@@ -32,11 +32,11 @@ jwt:
   expiration:
     accessToken: ${ACCESS_TOKEN_VALIDITY_IN_MILLISECONDS}
     refreshToken: ${REFRESH_TOKEN_VALIDITY_IN_MILLISECONDS}
-server:
-  port: 8443
-  ssl:
-    key-store: /etc/letsencrypt/live/gurdening.duckdns.org/keystore.p12
-    key-store-password: ${KEY_STORE_PASSWORD}
-    key-store-type: pkcs12
-    key-alias: tomcat
-    enabled: true
+#server:
+#  port: 8443
+#  ssl:
+#    key-store: /etc/letsencrypt/live/gurdening.duckdns.org/keystore.p12
+#    key-store-password: ${KEY_STORE_PASSWORD}
+#    key-store-type: pkcs12
+#    key-alias: tomcat
+#    enabled: true
